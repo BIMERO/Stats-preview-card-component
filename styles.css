@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white1: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white2: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    background-color: var(--Dark-desaturated-blue);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1020px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 32px;
+}
+header{
+    padding: 13%;
+}
+.image{
+    position: relative;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay{   
+    position: absolute;
+    background-color: var(--Soft-violet);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    mix-blend-mode: color;
+}
+.begin h1{
+    color: var(--White);
+    margin-bottom: 22px;
+}
+span{
+    color: var(--Soft-violet);
+    font-weight: 700;
+}
+p{
+    color: var(--Slightly-transparent-white1);
+    line-height: 1.8;
+}
+.con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+small{
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--Slightly-transparent-white2);
+}
+.one{
+    color: var(--White);
+}
+@media screen and (max-width:425px){
+    body{
+        text-align: center;
+        height: auto;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .image{
+        order: -1;
+    }
+    .begin h1{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    p{
+        font-size: 14px;
+    }
+    .con{
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .one{
+        margin-top: 19px;
+    }
+}
